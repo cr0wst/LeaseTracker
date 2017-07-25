@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Putting a route group here ensures the active menu will be selected for all VehicleController routes.
+Route::group(['_active_menu' => 'vehicle'], function() {
+    Route::get('/', 'VehicleController@index');
+    Route::resource('vehicle', 'VehicleController');
 });
+
+Route::group(['_active_menu' => 'mileage'], function() {
+    Route::get('mileage/{id}/create', 'MileageController@create')->name('mileage.create');
+    Route::post('mileage/{id}/store', 'MileageController@store')->name('mileage.store');
+});
+
