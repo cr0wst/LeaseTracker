@@ -23,7 +23,7 @@ class ComposerServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot():void
+    public function boot()
     {
         // Want to trigger this on the default view which is extended by all other views.
         View::composer('layouts/default', 'LeaseTracker\Http\ViewComposers\ActiveMenuComposer');
@@ -34,7 +34,7 @@ class ComposerServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register():void
+    public function register()
     {
         //
     }
