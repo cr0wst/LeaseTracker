@@ -12,7 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(LeaseTracker\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
