@@ -17,7 +17,7 @@ class CreateMilesEntryTable extends Migration
         {
             $table->increments('id');
             $table->integer('carId');
-            $table->integer('date');
+            $table->date('date');
             $table->integer('currentMileage');
             $table->timestamps();
         });
